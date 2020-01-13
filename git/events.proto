@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option go_package = "git";
+
+service EventsService{
+    rpc Event(EventRequest) returns (stream EventResponse);
+}
+
+message EventRequest{
+    repeated string topics = 2;
+
+}
+
+message EventResponse{
+    string topic = 1;
+    string filename = 2;
+    bytes contents = 3;
+    map<string, string> metadata = 4;
+}
