@@ -14,7 +14,7 @@ var startCommand = cli.Command{
 	Name:        "start",
 	Usage:       "start a streaming frequency",
 	ArgsUsage:   "[flags] <ref>",
-	Description: "fetch contents changes and sync to consul",
+	Description: "fetch contents changes and streams changes",
 	Action: func(c *cli.Context) error {
 		lis, err := net.Listen("tcp", ":"+c.GlobalString("port"))
 		if err != nil {

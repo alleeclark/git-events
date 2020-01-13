@@ -29,7 +29,6 @@ RUN cd $HOME && curl -fsSL https://github.com/libgit2/libgit2/archive/v0.28.1.ta
 	&& rm -rf $HOME/libgit2
 
 WORKDIR ${GOPATH}/src/
-RUN mkdir git2consul
 COPY . ${GOPATH}/src/git-events
 WORKDIR ${GOPATH}/src/git-events
 RUN go mod download

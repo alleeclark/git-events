@@ -124,9 +124,9 @@ func (c *Collection) ListFileChanges(pullDir string, ignoreFiles ...WithIgnoredF
 }
 
 var defaultCloneOptions = options{
-	username:       "git2consul",
-	publicKeyPath:  "/var/git2consul/id_rsa.pub",
-	privateKeyPath: "/var/git2consul/id_rsa",
+	username:       "gitevents",
+	publicKeyPath:  "/var/gitevents/id_rsa.pub",
+	privateKeyPath: "/var/gitevents/id_rsa",
 	passphrase:     "",
 	fingerPrint:    []byte{},
 }
